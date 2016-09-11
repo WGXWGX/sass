@@ -1,0 +1,93 @@
+@import 'common';
+@charset 'utf-8';
+$color:#eee;
+$color:yellow !default;
+$class:error;
+$bg:background;
+body{
+	background: $color;
+	div{
+		width: 500px;
+	}
+	.#{$class}{
+		#{$bg}:#000;
+		background:url(images/#{$class}.jpg);
+	}
+	.nav{
+		width: 2px;
+	}
+}
+@mixin div($width:50px,$height:80px){
+	width: $width;
+	height: $height;
+}
+.item{
+	@include div();
+}
+.item1{
+	padding: 0px;
+	@extend .item
+}
+%class1{
+	width: 23px;
+}
+.item2{
+	@extend %class1;
+}
+@function add($a,$b){
+	@return $a + $b;
+}
+.item3{
+	width: add(3px,5px);
+}
+
+@mixin arrow($direction){
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	@if($direction == down){
+		border-color: red transparent transparent transparent;
+		border-style: solid dashed dashed dashed ;
+	}
+	@if($direction == left){
+		border-color: transparent red  transparent transparent;
+		border-style: solid dashed dashed dashed ;
+	}
+	@if($direction == right){
+		border-color: transparent transparent transparent red;
+		border-style: solid dashed dashed dashed ;
+	}
+	@if($direction == up){
+		border-color: transparent transparent  red transparent;
+		border-style: solid dashed dashed dashed ;
+	}
+	border-width: 10px;
+}
+.item4{
+	@include arrow(right);
+}
+@for $i from 1 to 5{
+	.fore#{$i}{
+		width: 20px * $i;
+	}
+}
+@for $i from 1 through 5{
+	.fore#{$i}{
+		width: 20px * $i;
+	}
+}
+
+$j:0;
+@while $j < 5{
+	.test#{$j}{
+		width: #{$j}px;
+	}
+	$j:$j+2;
+}
+$list: error right;
+@each $i in $list{
+	.nav-#{$list}{
+		background:url(images/#{$i}.jpg);
+	}
+}
