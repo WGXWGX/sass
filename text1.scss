@@ -1,0 +1,36 @@
+css 预处理器  编写css
+//sass 以前版本
+scss 经常用 用sass写css
+sass --watch -------- --style expended;
+sass 语法
+	1.普通变量
+		$color:#eee;
+	2.默认变量
+		$color:yellow !default;  上面写覆盖
+	3.特殊变量
+		.#{$class}{   选择器
+			#{$bg}:#000;	属性值用变量表示时  --#{}
+			background:url(images/#{$class}.jpg);
+		}
+2.嵌套
+	1.属性值：{} 选择器嵌套
+	2.伪类：a{&:hover{}}   嵌套时给父元素设置样式加&
+3.混合宏  定义一整块代码  mixin 常用  缺点生成冗余的代码  有点：传参
+4.继承   继承所有
+5.占位符   谁用谁有这个属性
+
+6.6种数据类型 number color null list string bool
+
+7.函数abs() floor()......
+8.@import
+
+9.注释: /**/
+10.sass控制命令
+	上 有 下 左
+11.控制语句 if while 
+12.循环语句操作css样式
+//////////////////////////////////grunt具体实例应用以及插件安装，上课视频，grunt，具体，文件，自动化
+
+
+	
+ 
