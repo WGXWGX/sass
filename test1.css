@@ -1,0 +1,75 @@
+body {
+  background: #eee; }
+  body div {
+    width: 500px; }
+  body .error {
+    background: #000;
+    background: url(images/error.jpg); }
+  body .nav {
+    width: 2px; }
+
+.item, .item1 {
+  width: 50px;
+  height: 80px; }
+
+.item1 {
+  padding: 0px; }
+
+.item2 {
+  width: 23px; }
+
+.item3 {
+  width: 8px; }
+
+.item4 {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  border-color: transparent transparent transparent red;
+  border-style: solid dashed dashed dashed;
+  border-width: 10px; }
+
+.fore1 {
+  width: 20px; }
+
+.fore2 {
+  width: 40px; }
+
+.fore3 {
+  width: 60px; }
+
+.fore4 {
+  width: 80px; }
+
+.fore1 {
+  width: 20px; }
+
+.fore2 {
+  width: 40px; }
+
+.fore3 {
+  width: 60px; }
+
+.fore4 {
+  width: 80px; }
+
+.fore5 {
+  width: 100px; }
+
+.test0 {
+  width: 0px; }
+
+.test2 {
+  width: 2px; }
+
+.test4 {
+  width: 4px; }
+
+.nav-error right {
+  background: url(images/error.jpg); }
+
+.nav-error right {
+  background: url(images/right.jpg); }
+
+/*# sourceMappingURL=test1.css.map */
